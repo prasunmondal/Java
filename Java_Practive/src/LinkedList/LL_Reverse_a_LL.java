@@ -17,7 +17,7 @@ class LinkedList {
 		SingleLinkNode temp = new SingleLinkNode();
 		temp.data = data;
 		temp.next = null;
-		
+
 		if (this.head != null) {
 			SingleLinkNode node = head;
 			while (node.next != null) {
@@ -31,12 +31,27 @@ class LinkedList {
 		}
 	}
 
+	public void reverseLL() {
+		SingleLinkNode current = this.head;
+		SingleLinkNode prev = null, next = null;
+
+		while (current != null) {
+			next = current.next;
+			current.next = prev;
+			prev = current;
+			current = next;
+		}
+		head = prev;
+
+	}
+
 	public void print_LL() {
 		SingleLinkNode node = head;
 		while (node.next != null) {
 			System.out.print(node.data + ", ");
 			node = node.next;
-		}System.out.print(node.data);
+		}
+		System.out.print(node.data);
 	}
 }
 
@@ -48,6 +63,9 @@ public class LL_Reverse_a_LL {
 		ll.add_node(8);
 		ll.add_node(10);
 		ll.add_node(15);
+		ll.print_LL();
+		System.out.println();
+		ll.reverseLL();
 		ll.print_LL();
 	}
 }
