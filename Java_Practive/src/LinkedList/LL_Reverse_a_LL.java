@@ -44,6 +44,23 @@ class LinkedList {
 		head = prev;
 
 	}
+	
+	public void reverseLL_Recursively() {
+		head=reverseLL_Recurse(this.head);
+	}
+	
+	private SingleLinkNode reverseLL_Recurse(SingleLinkNode head) {
+		if(head==null || head.next==null) {
+			return head;
+		}
+		
+		SingleLinkNode node = reverseLL_Recurse(head.next);
+		
+		head.next.next = head;
+		head.next = null;
+		
+		return node;
+	}
 
 	public void print_LL() {
 		SingleLinkNode node = head;
@@ -66,6 +83,9 @@ public class LL_Reverse_a_LL {
 		ll.print_LL();
 		System.out.println();
 		ll.reverseLL();
+		ll.print_LL();
+		System.out.println();
+		ll.reverseLL_Recursively();
 		ll.print_LL();
 	}
 }
