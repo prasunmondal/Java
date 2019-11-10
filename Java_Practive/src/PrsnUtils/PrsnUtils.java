@@ -1,5 +1,7 @@
 package PrsnUtils;
 
+import java.util.HashSet;
+
 public class PrsnUtils {
 	
 	public static void printArray(int[] array) {
@@ -16,6 +18,10 @@ public class PrsnUtils {
 		for(i=0; i<array.length-1; i++) {
 			System.out.print(array[i] + ", ");
 		}System.out.println(array[i] + "]");
+	}
+	
+	public static void printCollection(HashSet<Integer> comp) {
+		printArray(comp.toArray());
 	}
 
 	public void main(String[] args) {
