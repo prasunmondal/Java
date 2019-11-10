@@ -23,8 +23,4 @@ public class PrsnUtils {
 	public static void printCollection(HashSet<Integer> comp) {
 		printArray(comp.toArray());
 	}
-
-	public void main(String[] args) {
-
-	}
 }
