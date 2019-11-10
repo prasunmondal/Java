@@ -55,7 +55,7 @@ public class Pair_To_Get_Sum {
 			if(comp.contains(sum-array[i]))
 				return true;
 			comp.add(array[i]);
-			PrsnUtils.printArray(comp.toArray());
+			PrsnUtils.printCollection(comp);
 		}
 		return false;
 	}
