@@ -32,6 +32,7 @@ Output:
 
 
 // Solution 1 (DFA)
+ https://www.geeksforgeeks.org/check-binary-string-multiple-3-using-dfa/
 
 
 
@@ -105,9 +106,4 @@ public class Divisible_by_3_from_binary {
 		}
 		System.out.println(dfa.isDivisibleBy3());
 	}
-	
-	public void test() {
-		for(int i=0; )
-	}
-
 }
