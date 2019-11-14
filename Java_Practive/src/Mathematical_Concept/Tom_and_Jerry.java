@@ -58,15 +58,13 @@ Besides that, if the loosing player wants to delay the outcome of the game as mu
  
 */
 
-
 package Mathematical_Concept;
-
 
 public class Tom_and_Jerry {
 
 	public static void main(String[] args) {
 		int n = 10;
-		System.out.println((n-1)%2);
+		System.out.println((n - 1) % 2);
 	}
 
 }
