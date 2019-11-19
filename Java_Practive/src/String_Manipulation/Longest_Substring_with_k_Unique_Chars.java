@@ -47,17 +47,6 @@ public class Longest_Substring_with_k_Unique_Chars {
 		charMap[index]--;
 	}
 
-	public static boolean doesContainKUniqueAlphabets(int k) {
-		return uniqueChar == k;
-	}
-
-	public static void printWindow() {
-		System.out.print("Left :" + left);
-		System.out.println("  Right: " + right);
-		System.out.println("String: " + str.substring(left, right));
-		System.out.println("UniqC: " + uniqueChar);
-	}
-
 	public static void increaseWindow() {
 		if (right < str.length())
 			add(str.charAt(right));
@@ -72,32 +61,26 @@ public class Longest_Substring_with_k_Unique_Chars {
 
 	public static String getMaxString(int k) {
 		String maxStr = "";
-		int maxLen = 0;
 
 		while (right <= str.length()) {
-			System.out.println();
-			if (uniqueChar > k) {
+			while (uniqueChar > k)
 				decreaseWindow();
-			} else if (uniqueChar < k) {
+
+			while (uniqueChar < k)
 				increaseWindow();
-			} else {
+
+			if (k == uniqueChar) {
 				int currentStrLen = right - left;
-				if (maxLen < currentStrLen) {
-					maxLen = currentStrLen;
-					System.out.println("LW: " + left + " RW: " + right + "    String: " + str.substring(left, right));
+				if (maxStr.length() < currentStrLen)
 					maxStr = str.substring(left, right);
-				}
 				increaseWindow();
 			}
-			if (right <= str.length())
-				printWindow();
-
 		}
 		return maxStr;
 	}
 
 	public static void main(String[] args) {
-		str = "abcddddeeffgghko";
+		str = "abcdee";
 		System.out.println(getMaxString(4));
 //		System.out.println(str.substring(2,6));
 	}
