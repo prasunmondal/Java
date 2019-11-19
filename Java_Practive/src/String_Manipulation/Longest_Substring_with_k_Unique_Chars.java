@@ -80,8 +80,8 @@ public class Longest_Substring_with_k_Unique_Chars {
 	}
 
 	public static void main(String[] args) {
-		str = "abcdee";
-		int k=4;
+		str = "abcdefghiihgfe";
+		int k=5;
 		System.out.println("Longest substring where number of unique characters is " + k + ": " + getMaxString(k));
 //		System.out.println(str.substring(2,6));
 	}
