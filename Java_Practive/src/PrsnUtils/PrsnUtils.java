@@ -12,6 +12,14 @@ public class PrsnUtils {
 		}System.out.println(array[i] + "]");
 	}
 	
+	public static void printArray(int[] array, int start, int end) {
+		int i=0;
+		System.out.print("[");
+		for(i=start; i<end; i++) {
+			System.out.print(array[i] + ", ");
+		}System.out.println(array[i] + "]");
+	}
+	
 	public static void printArray(Object[] array) {
 		int i=0;
 		System.out.print("[");
