@@ -2,14 +2,12 @@ package Array;
 
 /*
 
-
-
 Write an efficient program to find the sum of contiguous subarray within a one-dimensional array of numbers which has the largest sum.
 
+*/
 
 
 
- */
 public class Kadanes_Algorithm {
 
 	private static int kadanesAlgo(int[] arr) {
